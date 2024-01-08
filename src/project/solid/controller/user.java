@@ -1,8 +1,7 @@
 package project.solid.controller;
 
-public class user {
+public class user  implements userInterface{
     private Integer id ;
-    private String name;
     private String user;
     private String password;
     
@@ -10,42 +9,40 @@ public class user {
 
     }
 
-    public user(Integer id, String name, String user, String password) {
+    public user(Integer id, String user, String password) {
         this.id = id;
-        this.name = name;
         this.user = user;
         this.password = password;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
+    @Override
     public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
+    @Override
     public void setUser(String user) {
         this.user = user;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
+    @Override
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public Integer getId() {
+        return id;
+    }
+
+    @Override
+    public String getUser() {
+        return user;
+    }
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+    
 }
